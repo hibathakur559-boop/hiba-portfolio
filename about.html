@@ -32,6 +32,16 @@
   section{margin-top:44px;padding-top:24px;border-top:1px solid #DEDFDA;}
   .eyebrow{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--main);font-weight:600;margin-bottom:12px;text-align:center;}
   .contact-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px;}
+
+  .contact-form{max-width:440px;margin:20px auto 0;display:flex;flex-direction:column;gap:14px;}
+  .contact-form label{font-size:13px;font-weight:600;color:#555;text-align:left;}
+  .contact-form input,.contact-form textarea{
+    font-family:'Inter',sans-serif;font-size:14.5px;padding:10px 12px;
+    border:1px solid #DEDFDA;border-radius:5px;background:#fff;color:var(--ink);
+    width:100%;
+  }
+  .contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--main);outline-offset:1px;}
+  .contact-form button{border:none;cursor:pointer;margin-top:4px;}
   .btn{display:inline-block;background:var(--main);color:var(--paper);padding:12px 26px;border-radius:5px;font-weight:600;font-size:14px;text-decoration:none;}
   .btn:hover{background:var(--accent);color:var(--ink);}
   .btn.ghost{background:transparent;border:1px solid var(--main);color:var(--main);}
@@ -73,6 +83,22 @@
       <a class="btn ghost" href="https://www.linkedin.com/in/hiba-thakur-57532628b" target="_blank">LinkedIn</a>
       <a class="btn ghost" href="resume.png" target="_blank">Download CV</a>
     </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Send Me a Message</div>
+    <form action="https://formspree.io/f/mgawlvka" method="POST" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 </div>
 
